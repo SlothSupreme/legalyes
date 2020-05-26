@@ -1,0 +1,54 @@
+import webbrowser
+from tkinter import *
+import simpleaudio as sa
+import time
+from datetime import date
+year=0
+gettt=0 #this steal personal information yis
+def gett():
+    global year
+    global gettt
+    year = w.get()
+    gettt = 1
+    master.quit()
+today = date.today()
+tyear = today.year
+master = Tk()
+master.title('Boomer Detector')
+master.iconbitmap('c:/Users/maste/PycharmProjects/Boomer Detector/ae_4k3_icon.ico')
+w = Scale(master, from_=1900, to=tyear, length= tyear-1900)
+w.pack()
+button = Button(master, text='Submit', width=50, command=gett)
+button.pack()
+mainloop() #This steal tax dollars
+if year <= 1998 and gettt == 1:
+    master.update()
+    le = Label(master, text="Ok Boomer")
+    le.pack()
+    master.update()
+    master.quit()
+    wave_obj = sa.WaveObject.from_wave_file('C:/Users/maste/PycharmProjects/Boomer Detector/GenerationHard.wav')
+    play_obj = wave_obj.play()
+    webbrowser.open_new_tab('https://www.google.com/search?q=how+to+do+a+google&oq=how+to+do+a+google')
+    time.sleep(2)
+    webbrowser.open_new_tab('https://www.facebook.com/SanDiegoMomsBlog/')
+    time.sleep(2)
+    webbrowser.open_new_tab('https://www.google.com/search?q=what+is+a+fortnite')
+    time.sleep(2)
+    webbrowser.open_new_tab('https://www.google.com/search?q=how+to+fix+kidney+stones')
+    time.sleep(2)
+    webbrowser.open_new_tab('https://www.google.com/search?q=whats+a+boomer?')
+    mainloop()
+    play_obj.wait_done()
+    exit(0)
+#This ping children and kidnep
+elif gettt == 1:
+    master.update()
+    k = Label(master, text="Ok Zoomer")
+    k.pack()
+    master.update()
+    wave_obj = sa.WaveObject.from_wave_file('C:/Users/maste/PycharmProjects/Boomer Detector/Crab.wav')
+    play_obj = wave_obj.play()
+    mainloop()
+    play_obj.wait_done()
+    exit(0)
