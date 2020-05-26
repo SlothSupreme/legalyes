@@ -47,7 +47,7 @@ elif gettt == 1:
     k = Label(master, text="Ok Zoomer")
     k.pack()
     master.update()
-    wave_obj = sa.WaveObject.from_wave_file('C:/Users/maste/PycharmProjects/Boomer Detector/Crab.wav')
+    wave_obj = sa.WaveObject.from_wave_file('Crab.wav')
     play_obj = wave_obj.play()
     mainloop()
     play_obj.wait_done()
